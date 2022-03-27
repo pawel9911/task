@@ -1,0 +1,119 @@
+/*!
+ * Bootstrap v4.3.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "code";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "input-group";
+@import "custom-forms";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "jumbotron";
+@import "alert";
+@import "progress";
+@import "media";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "spinners";
+@import "utilities";
+@import "print";
+
+body {
+    color: $blue;
+    background-color: #F0F0F0;
+}
+
+.myContainer {
+    background-color: #F0F0F0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px ;
+    color: #121212;
+    div{
+        padding: 0;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.content {
+    background-color: #fff;
+    padding: 0;
+    display: flex;
+    h1 {
+        font-weight: bold;
+        font-size: 13.5px;
+        margin: 1em 0;
+    }
+    p {
+        font-weight: lighter;
+        margin-bottom: 2.2em;
+    }
+    button {
+        width: 6em;    
+        padding: 0.875em 0;
+        margin-bottom: 1em;
+        font-weight: bold;
+        border: none;
+        border-radius: 25px;
+        background-color: #E4C1AE;
+        color: #ffffff;
+    }
+}
+
+@mixin mediaQuery($titleSize, $containerSize, $buttonWidth) {
+    
+    .myContainer{
+        font-size: $containerSize;
+    }
+    .content{
+        button{
+            width: $buttonWidth;
+        }
+        h1{
+            font-size: $titleSize;
+        }
+    }
+}
+
+@media (min-width: 320px) {
+    @include mediaQuery(20px, 12.5px, 7em)
+}
+
+@media (min-width: 640px) {
+    @include mediaQuery(25px, 16px, 8em)
+} 
+
+@media (min-width: 768px) {
+    @include mediaQuery(32px, 16px, 9em)
+} 
+
+@media (min-width: 1280px) {
+    @include mediaQuery(42px, 16px, 10em)
+} 
